@@ -74,7 +74,7 @@ export default function Home() {
   const telecharger = () => {
     if (!estValide) return;
     const obj = JSON.parse(texte);
-    let nom = (obj.id ?? "data") + ".json";
+    const nom = (obj.id ?? "data") + ".json";
     const blob = new Blob([texte], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
